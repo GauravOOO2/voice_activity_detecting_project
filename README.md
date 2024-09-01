@@ -51,6 +51,7 @@ This project is a web application that allows users to upload audio files and de
 
    ```bash
    git clone https://github.com/GauravOOO2/voice_activity_detecting_project_Backend.git
+
    ```
 
 2. **Navigate to backend**
@@ -82,4 +83,3 @@ UPLOAD_FOLDER=./uploads
 ```bash
 py app.py
 ```
-
