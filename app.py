@@ -18,8 +18,9 @@ def upload_audio():
     file = request.files['audio']
     if file.filename == '':
         return jsonify({"error": "No selected file"}), 400
-
+    print(os.path,"file")
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+    print(file_path,"file path")
     file.save(file_path)
 
     audio = AudioSegment.from_file(file_path)
