@@ -1,14 +1,23 @@
 {
+    "version": 2,
     "functions": {
-      "api/**/*.py": {
-        "runtime": "@vercel/python"
-      }
+        "api/**/*.py": {
+            "runtime": "@vercel/python",
+            "maxDuration": 300
+        }
     },
     "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/api/$1.py"
-      }
+        {
+            "src": "/",
+            "dest": "/api/index.py"
+        },
+        {
+            "src": "/transcript",
+            "dest": "/api/transcript.py"
+        },
+        {
+            "src": "/setup_db",
+            "dest": "/api/setup_db.py"
+        }
     ]
-  }
-  
+}
